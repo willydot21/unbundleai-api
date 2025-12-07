@@ -2,10 +2,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, HTTPException
-from .app.prompts import *
-from .app.schemas import *
-from .app.llm_client import call_llm
-from .app.utils import try_parse_json
+from app.prompts import p_analyze as p_analyze, p_blueprint as p_blueprint, p_extract as p_extract, p_score as p_score
+from app.schemas import *
+from app.llm_client import call_llm
+from app.utils import try_parse_json
 
 app = FastAPI()
 app.add_middleware(

@@ -1,5 +1,4 @@
 import os
-from typing import Optional
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -24,7 +23,6 @@ def call_llm(prompt: dict[str, str], max_tokens: int = 512, temperature: float =
         model = "meta-llama/Llama-3.1-8B-Instruct:novita"
         try:
             completion = client.chat.completions.create(prompt, max_tokens=max_tokens, temperature=temperature, model=model).choices[0].message['content']
-            print(completion)
             return str(completion)
         except Exception as e:
             raise RuntimeError(f"LLM error: {e}")
