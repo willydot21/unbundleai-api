@@ -8,8 +8,7 @@ def p_analyze(app_text: str):
                 "target_users, main_purposes (lista), high_level_features "
                 "(lista de JSON<name, short_desc, category>), public_perception (3 bullets), "
                 "notable_tech_assumptions (lista)."
-                "En notable_tech_assumptions incluye solo nombres de tecnologías o conceptos "
-                "(ej: React, PostgreSQL, Microservices, REST API), sin descripciones. "
+                "En notable_tech_assumptions incluye solo nombres de tecnologías o conceptos, sin descripciones."
                 "No incluyas texto fuera del JSON."
             ),
         },
