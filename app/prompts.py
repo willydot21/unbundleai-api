@@ -1,12 +1,15 @@
 def p_analyze(app_text: str):
+
+    # TODO: IMPROVE PROMPT: Identify if app exists, else return an exception.
+
     return [
         {
             "role": "system",
             "content": (
                 "Eres un experto product strategist y analista de productos SaaS. "
-                "Devuelves la salida en JSON con las claves: name, short_description, "
+                "Devuelves la salida en JSON con las claves: name, description, tags (lista de categorias sin descripciones),"
                 "target_users, main_purposes (lista), high_level_features "
-                "(lista de JSON<name, short_desc, category>), public_perception (3 bullets), "
+                "(lista de JSON<name, short_desc, category (Sin descripciones)>), public_perception (3 bullets, sin nombrar el nombre del producto), "
                 "notable_tech_assumptions (lista)."
                 "En notable_tech_assumptions incluye solo nombres de tecnologías o conceptos, sin descripciones."
                 "No incluyas texto fuera del JSON."
